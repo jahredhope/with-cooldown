@@ -1,19 +1,16 @@
 {
     "name": "with-cooldown",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Apply a cooldown to a method",
     "main": "index.js",
     "scripts": {
         "test": "jest",
         "build": "babel src/index.js --out-file index.js",
         "commit": "commitlint -e",
-        "commitmsg": "commitlint -e"
+        "commitmsg": "commitlint -e",
+        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
     },
-    "keywords": [
-        "decorators",
-        "cooldown",
-        "throttle"
-    ],
+    "keywords": ["decorators", "cooldown", "throttle"],
     "author": "Jahred Hope <jahredhope@gmail.com>",
     "license": "ISC",
     "devDependencies": {
