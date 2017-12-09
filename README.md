@@ -1,35 +1,35 @@
 # with-cooldown
 
+[![Build Status](https://travis-ci.org/jahredhope/with-cooldown.svg?branch=master)](https://travis-ci.org/jahredhope/with-cooldown)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jahredhope/with-cooldown.svg)](https://greenkeeper.io/)
 Stops calls to the supplied method happening for a cooldown period.  
-The initial call will go through, and for the timeout given all further calls will be immediately returned.  
+The initial call will go through, and for the timeout given all further calls will be immediately returned.
 
-Multiple calls are not replayed after the cooldown.  
+Multiple calls are not replayed after the cooldown.
 
-This module works both with and without decorators, however decorators are the primary tested use-case.  
+This module works both with and without decorators, however decorators are the primary tested use-case.
 
 ### Example
 
 ##### function syntax
-``` javascript
+
+```javascript
 import withCooldown from './with-cooldown';
 
-const foo = withCooldown(
-  100,
-  () => console.log('Only call me once in 100ms')
-)
+const foo = withCooldown(100, () => console.log('Only call me once in 100ms'));
 
 foo(); // => Only call me once
 foo(); // immediate return
 ```
 
 ##### decorator syntax
-``` javascript
+
+```javascript
 class Foo {
-  @withCooldown(100)
-  bar() {
-      console.log('Only call me once in 100ms');
-  }
+    @withCooldown(100)
+    bar() {
+        console.log('Only call me once in 100ms');
+    }
 }
 
 const foo = new Foo();
@@ -39,5 +39,6 @@ foo.bar(); // immediate return
 ```
 
 ### Contributing
+
 Contributions are welcome.  
-Pull requests will not be merged without related unit tests.  
+Pull requests will not be merged without related unit tests.
