@@ -1,4 +1,6 @@
 # with-cooldown
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/jahredhope/with-cooldown.svg)](https://greenkeeper.io/)
 Stops calls to the supplied method happening for a cooldown period.  
 The initial call will go through, and for the timeout given all further calls will be immediately returned.  
 
