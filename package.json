@@ -1,6 +1,6 @@
 {
     "name": "with-cooldown",
-    "version": "1.0.0",
+    "version": "0.0.0-development",
     "description": "Apply a cooldown to a method",
     "main": "index.js",
     "scripts": {
