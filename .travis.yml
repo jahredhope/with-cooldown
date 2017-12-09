@@ -1,12 +1,18 @@
 language: node_js
 node_js:
 - node
+
 script:
 - npm test
 - npm run build
 
-after_success:
-- npm run semantic-release
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+  - npm run semantic-release
+  on:
+    branch: master
 
 cache:
   directories:
