@@ -22,7 +22,7 @@
         "commitlint": "^5.2.5",
         "husky": "^0.14.3",
         "jest": "^21.2.1",
-        "semantic-release": "^11.0.1"
+        "semantic-release": "^15.13.31"
     },
     "repository": {
         "type": "git",
